@@ -1,0 +1,26 @@
+<!-- development version, includes helpful console warnings -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+    <p> {{Contador}} </p>
+    <button v-on:click="Somar()">Somar 1</button>
+    <hr>
+    <p> 
+        {{ Contador <= 12 ? 'Bom dia' : Contador <= 18 ? 'Boa tarde' : Contador <= 24 ? 'Boa noite' : 'Horário desconhecido ' }}
+    </p>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            Contador: 0
+        },
+        methods: {
+            Somar() {
+                this.Contador++
+            },
+
+        },
+    })
+</script>
